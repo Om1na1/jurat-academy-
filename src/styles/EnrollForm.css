@@ -1,0 +1,197 @@
+:root {
+  --card-bg: #f5f6f8;
+  --accent: #ea3f63;
+  --accent-20: #f6b5c5;
+  --text: #2b2b2b;
+  --muted: #8d8d95;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --shadow-lg: 0 22px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Контейнер секции */
+.enroll {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+
+  /* растягиваем на всю ширину окна */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* убираем фон — он у карточки */
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+/* Левая сторона со стопкой фото */
+.enroll__media {
+  position: relative;
+  height: 983px;
+  min-height: 983px;
+  z-index: 0;
+}
+
+.media-card {
+  position: absolute;
+  left: 0; /* в самый край окна */
+  right: 30%;
+  height: 58%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.media-card--back {
+  top: 0;
+  filter: brightness(0.95);
+}
+.media-card--mid {
+  top: 90px;
+}
+.media-card--front {
+  top: 210px;
+}
+
+/* Карточка формы */
+.enroll__card {
+  width: 1128px;
+  height: 983px;
+  box-sizing: border-box;
+
+  margin-left: auto;
+  background: var(--card-bg);
+  border-radius: 36px;
+  padding: 60px 100px 80px 100px;
+
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+/* Тень снизу */
+.enroll__card::after {
+  content: "";
+  position: absolute;
+  inset: auto 22px -14px 22px;
+  height: 28px;
+  border-radius: 28px;
+  filter: blur(18px);
+  background: rgba(0, 0, 0, 0.12);
+  z-index: -1;
+}
+
+/* Заголовок + кружочек */
+.enroll__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: inset 0 0 0 3px white, 0 0 0 2px rgba(234, 63, 99, 0.15);
+  background: radial-gradient(circle at 50% 50%, var(--accent) 0 45%, transparent 46%);
+}
+.enroll__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a51;
+}
+
+/* Поля */
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.field__label {
+  font-size: 12px;
+  color: var(--muted);
+}
+.field__control {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--accent-20);
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field__control::placeholder {
+  color: #a5a5ad;
+}
+.field__control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(234, 63, 99, 0.12);
+}
+.field__control--area {
+  height: 120px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+/* Кнопка */
+.btn {
+  display: block;
+  width: 56%;
+  margin: 8px auto 0;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.06s ease, filter 0.2s ease;
+}
+.btn:hover {
+  filter: brightness(0.95);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Адаптив */
+@media (max-width: 980px) {
+  .enroll {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0; /* убираем сдвиги */
+  }
+  .enroll__media {
+    order: 2;
+    height: 360px;
+  }
+  .media-card {
+    right: 18%;
+    height: 60%;
+  }
+  .media-card--mid {
+    top: 70px;
+  }
+  .media-card--front {
+    top: 160px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+ 

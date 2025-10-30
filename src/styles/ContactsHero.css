@@ -1,0 +1,124 @@
+/* Заголовок с иконкой */
+.contact-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1); 
+}
+
+
+.contact-card p,
+.contact-card a {
+  color: rgba(255, 255, 255, 1); 
+}
+
+.contact-card a:hover {
+  color: #f6b5c5; 
+}
+.contacts-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Public Sans', sans-serif;
+
+  background: url('/public/images/main_club_bg.jpg') center/cover no-repeat;
+}
+
+ .contacts-section .overlay {
+  width: 1138px;   
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px; 
+  align-items: center;
+  justify-content: center;
+
+  
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Заголовок */
+.contacts-title {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 125%;
+  letter-spacing: -2px;
+  text-align: center;
+  color: #fff; 
+  margin: 0;
+}
+
+/* Контент */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  border:none;
+  border-radius: 16px;
+  background: none; 
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.contact-card a {
+  color: #f6b5c5;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.contact-card a:hover {
+  color: #fff;
+}
+
+/* 🔹 Адаптив */
+@media (max-width: 992px) {
+  .contacts-section .overlay {
+    width: 95%;
+    gap: 40px;
+  }
+
+  .contacts-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,113 @@
+/* Карта во весь экран */
+.tjmap-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .tjmap{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  
+  /* Лоадер */
+  .tjmap-loader{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    font-weight: 700;
+    color: #111827;
+    background: linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.3));
+    backdrop-filter: blur(1px);
+  }
+  
+  /* Мини-карточка */
+  .mini-card{
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    width: min(640px, 92vw);
+    background: #fff;
+    border-radius: 26px;
+    box-shadow:
+      0 30px 60px -30px rgba(0,0,0,.30),
+      0 50px 100px -20px rgba(50,50,93,.25);
+    overflow: hidden;
+    z-index: 20;
+  }
+  
+  /* Кнопка закрытия */
+  .mini-card__close{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(17,24,39,.6);
+    color: #fff;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+  .mini-card__close:hover{ background: rgba(17,24,39,.75); }
+  
+  /* Картинка сверху карточки (компактная) */
+  .mini-card__image img{
+    width: 100%;
+    height: 180px;             /* чуть ниже, чем «большая» карточка */
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Текстовая часть */
+  .mini-card__body{
+    padding: 18px 22px 22px;
+    color: #111827;
+  }
+  .mini-card__name{
+    margin: 2px 0 8px;
+    font-size: 18px;
+  }
+  .mini-card__row{
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  .mini-card__title{
+    margin: 12px 0 10px;
+    text-align: center;
+  }
+  
+  /* Чипсы инвентаря */
+  .chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+  }
+  .chip{
+    background: #e73e5a;
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .chip--muted{
+    background: #e5e7eb;
+    color: #111827;
+  }
+  
+  /* Если есть фиксированный header, а карту надо подтянуть под него */
+  .infrastructure .tjmap-wrapper{
+    margin-top: -120px; /* подстрой под высоту своего хедера */
+  }
+  
+  /* Слои Leaflet ниже хедера */
+  .leaflet-container{ z-index: 0; }
+  

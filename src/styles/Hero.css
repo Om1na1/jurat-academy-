@@ -1,0 +1,85 @@
+/* Hero */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  font-family: 'Public Sans', sans-serif;
+
+  /* Холодное тёмное затемнение сверху вниз */
+  background-image:
+    linear-gradient(to bottom, rgba(0, 30, 60, 0.3), rgba(0, 0, 0, 0.85)),
+    url('/public/images/main_hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  background-color: transparent; /* убрана плёнка */
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 39px; /* title_block */
+  line-height: 47px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+
+.hero p {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 18px; /* subtext size */
+  line-height: 27px;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 14px 28px;
+  font-size: 16px; /* text size */
+  line-height: 125%;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700; /* Bold */
+  font-family: 'Public Sans', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #e60039;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #b3002c;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #e60039;
+  border: 2px solid #e60039;
+}
+
+.btn-secondary:hover {
+  background-color: #e60039;
+  color: white;
+}

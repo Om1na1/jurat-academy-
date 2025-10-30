@@ -1,0 +1,126 @@
+.mission-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.mission-content {
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* обёртка текста и карточки */
+.mission-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 320px;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-subtitle {
+  color: #e60039;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.mission-text h2 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.mission-quote {
+  border-left: 4px solid #e60039;
+  margin: 0 0 20px 0;
+  padding-left: 16px;
+  font-style: italic;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.mission-text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.mission-card {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 30px 40px 40px;
+  max-width: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-card h3 {
+  color: #e60039;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.mission-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.mission-card li {
+  margin-bottom: 6px;
+}
+
+/* Фото справа */
+.mission-photo-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.player-photo {
+  width: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .mission-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission-photo-wrapper {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .player-photo {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .mission-card {
+    width: 100%;
+  }
+}

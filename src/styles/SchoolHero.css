@@ -1,0 +1,65 @@
+/* SchoolHero.css */
+
+.school-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  font-family: 'Public Sans', sans-serif;
+
+  /* Холодное тёмное затемнение сверху вниз */
+  background-image:
+    linear-gradient(to bottom, rgba(0, 30, 60, 0.3), rgba(0, 0, 0, 0.85)),
+    url('/public/images/main_hero_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.school-hero-overlay {
+  background-color: transparent;
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.section-content h1 {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 39px; /* title_block */
+  line-height: 47px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+
+.section-content p {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 18px; /* subtext size */
+  line-height: 27px;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  padding: 14px 28px;
+  font-size: 16px; /* text size */
+  line-height: 125%;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700; /* Bold */
+  font-family: 'Public Sans', sans-serif;
+  background-color: #e60039;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b3002c;
+}

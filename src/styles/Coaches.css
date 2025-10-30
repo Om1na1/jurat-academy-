@@ -1,0 +1,136 @@
+/* Coaches.css — обновлённая версия:
+   - заголовок по центру
+   - большая пустота перед первой карточкой (padding-left)
+   - нет отступа справа (последняя карточка у правого края)
+   - размеры карточек/фото/текстов не изменены
+*/
+
+.coaches-section {
+  text-align: center;
+  padding: 48px 0 96px;
+  font-family: "Inter", sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  /* Фон с точками */
+  background-image:
+    radial-gradient(circle, #ddd 1px, transparent 1px),
+    radial-gradient(circle, #ddd 1px, transparent 1px);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  background-color: white;
+
+  position: relative;
+}
+
+.coaches-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Контейнер для слайдера */
+.slider-container {
+  position: relative;
+  width: 100%;
+  /* overflow visible, чтобы кнопки могли появляться за пределами ленты */
+  overflow: visible;
+}
+
+/* Лента с карточками
+   padding-left задаёт большой отступ перед первой карточкой,
+   padding-right = 0 — последняя карточка упирается в правый край контейнера */
+.coaches-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  padding: 10px 0 10px 80px; /* top right bottom left */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+
+.coaches-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Карточка тренера (размеры оставлены как в предыдущем варианте) */
+.coach-card {
+  background: #fff;
+  border-radius: 14px;
+  flex: 0 0 auto;
+  width: 182px;
+  height: 276px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.coach-card img {
+  width: 162px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.coach-info {
+  margin-top: 8px;
+  text-align: left; /* текст внутри карточек по левому краю */
+}
+
+.coach-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.coach-desc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(121, 121, 121, 1);
+}
+
+/* Кнопки навигации — в правом нижнем углу, но сдвинуты левее (right: 40px) */
+.slider-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  bottom: -50px;
+  right: 40px; /* чуть левее правого края */
+}
+
+.slider-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.slider-btn.prev {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.slider-btn.next {
+  background: rgba(231, 42, 84, 1);
+}
+
+.slider-btn:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  font-size: 20px;
+  line-height: 1;
+}

@@ -1,0 +1,36 @@
+.quote-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 1128px; /* совпадает с шириной school-container */
+  margin: 0 auto 0 2cm; /* сдвигаем весь контейнер вправо */
+  padding: 40px 0;
+}
+
+.quote-logo {
+  width: 120px; /* чуть больше, чтобы логотип был заметнее */
+  height: auto;
+  flex-shrink: 0;
+}
+
+.quote-divider {
+  width: 2px;
+  height: 120px;
+  background-color: #e40045;
+}
+
+.quote-text {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 32px; /* как заголовок school-text h2 */
+  line-height: 1.3;
+  color: #0a121f; /* темный цвет, как в feature-text h4 */
+  max-width: 800px;
+  text-align: left;
+  margin-left: 0;  /* убираем сдвиг у текста */
+}
+
+.highlight {
+  color: #e40045;
+  font-weight: 700;
+}

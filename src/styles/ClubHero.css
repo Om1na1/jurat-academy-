@@ -1,0 +1,39 @@
+
+.club-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Public Sans', sans-serif;
+
+  background: url('/public/images/soccer-stadium.png') center/cover no-repeat;
+}
+
+.club-section .club-overlay {
+  width: 1138px;  
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px; 
+  align-items: center;
+  justify-content: center;
+
+  
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.club-title {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 125%;
+  letter-spacing: -2px;
+  text-align: center;
+  color: #fff; 
+  margin: 0;
+}

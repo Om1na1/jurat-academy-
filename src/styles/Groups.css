@@ -1,0 +1,132 @@
+/* === Секция === */
+.groups-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 125%;
+  letter-spacing: 0;
+  background: rgba(241, 241, 241, 1);
+  color: #000; /* чёрный текст на светлом фоне */
+}
+
+/* Заголовок секции */
+.groups-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Контейнер карточек */
+.groups-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Карточка */
+.group-card {
+  background: #fff;
+  border-radius: 12px;
+  width: 252px; /* фиксированная ширина */
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000; /* чёрный текст внутри */
+}
+
+/* Шапка карточки */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+}
+
+/* Кнопка-стрелка */
+.arrow-btn {
+  background: #e63946;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.arrow-btn:hover {
+  background: #d62839;
+  transform: translateY(-2px);
+}
+
+/* Обёртка изображения */
+.image-wrapper {
+  margin-top: 12px;
+}
+
+/* Картинка */
+.image-wrapper img {
+  width: 252px;
+  height: 180px; /* чуть уменьшил для компактности */
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
+}
+
+/* Описание */
+.description {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 12px 0;
+  text-align: left;
+}
+
+/* Кнопка "Записаться" */
+.signup-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.signup-btn:hover {
+  background: #d62839;
+  transform: translateY(-2px);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .groups-container {
+    gap: 16px;
+  }
+
+  .group-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+} 
