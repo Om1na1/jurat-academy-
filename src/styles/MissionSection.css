@@ -1,10 +1,12 @@
 .mission-section {
   background: #fff;
   padding: 60px 20px;
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
 
 .mission-content {
-  max-width: 1128px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -13,13 +15,13 @@
   flex-wrap: nowrap;
 }
 
-/* обёртка текста и карточки */
 .mission-text-block {
+  max-width: 650px;
+  flex: 1;
+  min-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  flex: 1;
-  min-width: 320px;
+  gap: 10px;
 }
 
 .mission-text {
@@ -59,16 +61,35 @@
   max-width: 500px;
 }
 
+.card-with-photo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: fit-content;
+  transform: translate(40px, 40px);
+}
+.player-photo-overlap {
+  position: absolute;
+  top: -70px;
+  right: 100px;
+  width: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+  z-index: 2;
+}
+
 .mission-card {
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 30px 40px 40px;
-  max-width: 420px;
-  position: relative;
+  max-width: none;
+  width: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 1;
+  position: relative;
+  margin-left: 100px;
 }
 
 .mission-card h3 {
@@ -90,37 +111,33 @@
   margin-bottom: 6px;
 }
 
-/* Фото справа */
-.mission-photo-wrapper {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.player-photo {
-  width: 260px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-/* Адаптив */
 @media (max-width: 768px) {
   .mission-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .mission-photo-wrapper {
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .player-photo {
+  .card-with-photo-wrapper {
     width: 100%;
-    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    transform: none;
   }
 
   .mission-card {
+    max-width: 100%;
     width: 100%;
+    margin-left: 0;
+  }
+
+  .player-photo-overlap {
+    position: static;
+    width: 100%;
+    max-width: 260px;
+    margin-top: 20px;
+    right: auto;
+    top: auto;
   }
 }

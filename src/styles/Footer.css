@@ -1,16 +1,15 @@
-/* styles/Footer.css */
 body {
-  background-color: #fff; /* белый фон страницы */
+  background-color: #fff;
 }
 
 .footer {
-  background-color: #fff; /* белый фон футера по бокам */
+  background-color: #fff;
   padding: 40px 0 20px;
   font-family: sans-serif;
 }
 
 .footer-inner {
-  background-color: #03131d; /* тёмный блок с закруглениями */
+  background-color: #03131d;
   border-radius: 20px;
   max-width: 1140px;
   margin: 0 auto;
@@ -86,4 +85,3 @@ body {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
-

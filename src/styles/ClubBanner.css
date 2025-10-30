@@ -6,9 +6,9 @@
   height: 480px;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ❗ блок теперь СЛЕВА */
+  justify-content: flex-start;
 
-  background-image: url("/public/images/main_club_bg.jpg"); /* ✅ проверь путь */
+  background-image: url("/public/images/main_club_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* затемнение всего фона */
+  background: rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
 
@@ -29,19 +29,19 @@
   width: 551px;
   height: 438px;
 
-  background: rgba(255, 255, 255, 0.45); /* ✅ нужный цвет */
+  background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  border-radius: 36px; /* ✅ скругление всех углов */
+  border-radius: 36px;
   padding: 47px 48px;
-  margin-left: 5%; /* ❗ отступ от левого края */
+  margin-left: 5%;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
-  text-align: left; /* ✅ левое выравнивание */
+  text-align: left;
 }
 
 .overlay h1 {

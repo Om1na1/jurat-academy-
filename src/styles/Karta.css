@@ -91,7 +91,7 @@
 }
 
 .karta-right {
-  width: 860px; /* примерно оставшееся место */
+  width: 860px;
   height: 450px;
   background: url("/public/images/main_football_map.png") no-repeat center center;
   background-size: contain;

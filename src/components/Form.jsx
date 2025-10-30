@@ -146,7 +146,7 @@ const Form = () => {
         </div>
 
         <div className="form-image">
-          <img src="/images/main_form_img.jpg" alt="Футбол" />
+          <img src="/images/main_form1_img.jpg" alt="Футбол" />
         </div>
       </div>
     </section>

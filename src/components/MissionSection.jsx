@@ -5,7 +5,7 @@ function MissionSection() {
   return (
     <section className="mission-section">
       <div className="mission-content">
-        {/* Левая часть: текст + карточка */}
+        {/* Левая часть: текст */}
         <div className="mission-text-block">
           <div className="mission-text">
             <div className="mission-subtitle">миссия</div>
@@ -18,7 +18,10 @@ function MissionSection() {
               Этот проект вдохновлен историей Эҳсони и стремлением дать каждому ребёнку шанс раскрыть свой потенциал через спорт.
             </p>
           </div>
+        </div>
 
+        {/* Правая часть: карточка + наложенное фото */}
+        <div className="card-with-photo-wrapper">
           <div className="mission-card">
             <h3>Путь Эҳсони</h3>
             <ul>
@@ -29,14 +32,11 @@ function MissionSection() {
               <li>Сборная Таджикистана: 57 матчей - 5 голов</li>
             </ul>
           </div>
-        </div>
 
-        {/* Правая часть: фото */}
-        <div className="mission-photo-wrapper">
           <img
             src="/images/main_ehsoni.png"
             alt="Эҳсони"
-            className="player-photo"
+            className="player-photo-overlap"
           />
         </div>
       </div>

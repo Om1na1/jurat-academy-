@@ -1,11 +1,14 @@
 import React from 'react';
+import { FaYoutube, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="header">
-      <div className="container header-content">
+      <div className="header-content">
+        
+        {/* Навигация по центру */}
         <nav className="nav">
           <Link to="/">Главная</Link>
           <Link to="/infrastructure">Инфраструктура</Link>
@@ -14,15 +17,21 @@ export default function Header() {
           <Link to="/club">Клуб</Link>
           <Link to="/contacts">Контакты</Link>
         </nav>
+
+        {/* Логотип ПОСЛЕ навигации */}
         <div className="logo">
-          <img src='/images/logo.svg' alt="Логотип футбольной школы" />
+          <img src="/images/logo.svg" alt="Логотип" />
         </div>
+
+        {/* Соц. иконки справа */}
         <div className="social-icons">
-          <a href="#"><img src="/icons/youtube.svg" alt="YouTube" /></a>
-          <a href="#"><img src="/icons/instagram.svg" alt="Instagram" /></a>
-          <a href="#"><img src="/icons/facebook.svg" alt="Facebook" /></a>
+          <a href="#"><FaYoutube /></a>
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaFacebook /></a>
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;

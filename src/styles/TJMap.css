@@ -1,4 +1,3 @@
-/* Карта во весь экран */
 .tjmap-wrapper{
     position: relative;
     width: 100%;
@@ -12,7 +11,6 @@
     overflow: hidden;
   }
   
-  /* Лоадер */
   .tjmap-loader{
     position: absolute;
     inset: 0;
@@ -25,7 +23,6 @@
     backdrop-filter: blur(1px);
   }
   
-  /* Мини-карточка */
   .mini-card{
     position: absolute;
     left: 24px;
@@ -40,7 +37,6 @@
     z-index: 20;
   }
   
-  /* Кнопка закрытия */
   .mini-card__close{
     position: absolute;
     top: 8px;
@@ -58,15 +54,13 @@
   }
   .mini-card__close:hover{ background: rgba(17,24,39,.75); }
   
-  /* Картинка сверху карточки (компактная) */
   .mini-card__image img{
     width: 100%;
-    height: 180px;             /* чуть ниже, чем «большая» карточка */
+    height: 180px;
     object-fit: cover;
     display: block;
   }
   
-  /* Текстовая часть */
   .mini-card__body{
     padding: 18px 22px 22px;
     color: #111827;
@@ -84,7 +78,6 @@
     text-align: center;
   }
   
-  /* Чипсы инвентаря */
   .chips{
     display: flex;
     flex-wrap: wrap;
@@ -103,11 +96,8 @@
     color: #111827;
   }
   
-  /* Если есть фиксированный header, а карту надо подтянуть под него */
   .infrastructure .tjmap-wrapper{
-    margin-top: -120px; /* подстрой под высоту своего хедера */
+    margin-top: -120px;
   }
   
-  /* Слои Leaflet ниже хедера */
   .leaflet-container{ z-index: 0; }
-  

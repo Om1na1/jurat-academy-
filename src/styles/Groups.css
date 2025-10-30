@@ -1,4 +1,3 @@
-/* === Секция === */
 .groups-section {
   text-align: center;
   padding: 40px 20px;
@@ -9,17 +8,15 @@
   line-height: 125%;
   letter-spacing: 0;
   background: rgba(241, 241, 241, 1);
-  color: #000; /* чёрный текст на светлом фоне */
+  color: #000;
 }
 
-/* Заголовок секции */
 .groups-section h2 {
   font-size: 28px;
   margin-bottom: 40px;
   font-weight: 600;
 }
 
-/* Контейнер карточек */
 .groups-container {
   display: flex;
   justify-content: center;
@@ -27,20 +24,18 @@
   flex-wrap: wrap;
 }
 
-/* Карточка */
 .group-card {
   background: #fff;
   border-radius: 12px;
-  width: 252px; /* фиксированная ширина */
+  width: 252px;
   padding: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #000; /* чёрный текст внутри */
+  color: #000;
 }
 
-/* Шапка карточки */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +49,6 @@
   margin: 0;
 }
 
-/* Кнопка-стрелка */
 .arrow-btn {
   background: #e63946;
   color: white;
@@ -75,21 +69,18 @@
   transform: translateY(-2px);
 }
 
-/* Обёртка изображения */
 .image-wrapper {
   margin-top: 12px;
 }
 
-/* Картинка */
 .image-wrapper img {
   width: 252px;
-  height: 180px; /* чуть уменьшил для компактности */
+  height: 180px;
   object-fit: cover;
   border-radius: 7px;
   display: block;
 }
 
-/* Описание */
 .description {
   font-size: 13px;
   line-height: 1.4;
@@ -97,7 +88,6 @@
   text-align: left;
 }
 
-/* Кнопка "Записаться" */
 .signup-btn {
   background: #e63946;
   color: white;
@@ -114,7 +104,6 @@
   transform: translateY(-2px);
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
   .groups-container {
     gap: 16px;
@@ -129,4 +118,4 @@
     width: 100%;
     height: auto;
   }
-} 
+}
